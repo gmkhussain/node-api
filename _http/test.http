@@ -1,0 +1,38 @@
+### View All
+
+GET http://localhost:8080/api/users
+
+
+
+
+### Delete
+
+DELETE http://localhost:8080/api/users/8
+
+
+
+
+### Add
+
+POST http://localhost:8080/api/users
+content-type: application/json
+
+{ 
+  "username": "Bmp",
+  "email": "info@now.com",
+  "phone": "132154"
+}
+
+
+
+
+### Update
+
+PUT http://localhost:8080/api/users/2
+content-type: application/json
+
+{ 
+  "username": "MMMM",
+  "email": "yyyyyyyy@now.com",
+  "phone": "132154"
+}
