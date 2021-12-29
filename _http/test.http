@@ -1,20 +1,90 @@
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY0MDc4NTE5NSwiZXhwIjoxNjQxMzg5OTk1fQ.okJswXtKo1AkJUqm8BAXFGM-YgKQFMoK4ZI4iJLZHog
+@json = application/json
+##################
+
+### Sign Up
+POST http://localhost:4000/users/register
+content-type: {{json}}
+
+{ 
+  "firstName": "MMMM",
+  "lastName": "MMMM",
+  "username": "MyUserName",
+  "password": "123456"
+}
+
+
+
+
+### Login
+POST http://localhost:4000/users/authenticate
+content-type: {{json}}
+
+{ 
+  "username": "xsd",
+  "password": "123456"
+}
+
+
+
+### Users
+GET http://localhost:4000/
+content-type: {{json}}
+Authorization: {{token}}
+
+
+
+
+
+
+### All Users
+GET http://localhost:4000/users
+content-type: {{json}}
+Authorization: {{token}}
+
+
+
+### Current User
+GET http://localhost:4000/users/current
+content-type: {{json}}
+Authorization: {{token}}
+
+
+### User by Id
+GET http://localhost:4000/users/2
+content-type: {{json}}
+Authorization: {{token}}
+
+
+
+
+
+
+
+
+
+
+
+### OLD ###
+
+
 ### View All
 
-GET http://localhost:8080/api/users
+GET http://localhost:4000/api/users
 
 
 
 
 ### Delete
 
-DELETE http://localhost:8080/api/users/8
+DELETE http://localhost:4000/api/users/8
 
 
 
 
 ### Add
 
-POST http://localhost:8080/api/users
+POST http://localhost:4000/api/users
 content-type: application/json
 
 { 
@@ -28,7 +98,7 @@ content-type: application/json
 
 ### Update
 
-PUT http://localhost:8080/api/users/2
+PUT http://localhost:4000/api/users/2
 content-type: application/json
 
 { 
@@ -38,29 +108,3 @@ content-type: application/json
 }
 
 
-
-##################
-
-
-### Sign Up
-POST http://localhost:4000/users/register
-content-type: application/json
-
-{ 
-  "firstName": "MMMM",
-  "lastName": "MMMM",
-  "username": "xsd",
-  "password": "123456"
-}
-
-
-
-
-### Login
-POST http://localhost:4000/users/authenticate
-content-type: application/json
-
-{ 
-  "username": "xsd",
-  "password": "123456"
-}
